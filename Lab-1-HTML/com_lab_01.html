@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Sheet 01 - Core Web Structures Using Semantic HTML</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        header.site-header {
+            background-color: #14213d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Jump-link menu to move between the three tasks */
+        nav.task-jump {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+        nav.task-jump a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #14213d;
+            font-weight: bold;
+        }
+        nav.task-jump a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section.task {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        section.task h2 {
+            border-bottom: 2px solid #14213d;
+            padding-bottom: 8px;
+        }
+
+        /* ---- Task 1.1 Resume styles ---- */
+        .resume-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* ---- Task 1.2 Nested nav menu styles ---- */
+        nav.menu ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        nav.menu ul ul {
+            margin-left: 20px;
+        }
+        nav.menu a {
+            text-decoration: none;
+            color: darkblue;
+        }
+        nav.menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---- Task 1.3 Catalog styles ---- */
+        dl dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        dl dd {
+            margin-left: 20px;
+            color: #444;
+        }
+
+        footer.site-footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MAIN SITE HEADER -->
+    <header class="site-header">
+        <h1>Lab Sheet 01: Core Web Structures Using Semantic HTML</h1>
+        <p>Tasks 1.1, 1.2 and 1.3 combined into a single page</p>
+    </header>
+
+    <!-- Simple jump navigation to scroll to each task -->
+    <nav class="task-jump" aria-label="Task Navigation">
+        <a href="#task1">Task 1.1 - Resume</a>
+        <a href="#task2">Task 1.2 - Nested Menu</a>
+        <a href="#task3">Task 1.3 - Catalog</a>
+    </nav>
+
+    <main>
+
+        <!-- ============================================= -->
+        <!-- TASK 1.1: Resume page with semantic layout      -->
+        <!-- ============================================= -->
+        <section class="task" id="task1" aria-labelledby="task1-heading">
+            <h2 id="task1-heading">Task 1.1: Resume Page (Semantic Layout + Accessibility)</h2>
+
+            <header class="resume-header">
+                <h3>Shivani Yadav</h3>
+                <p>Aspiring Data Science | Roorkee, India</p>
+            </header>
+
+            <section aria-labelledby="about-heading">
+                <h4 id="about-heading">About Me</h4>
+                <p>I am a -year engineering student learning web development and passionate about building accessible websites.</p>
+            </section>
+
+            <section aria-labelledby="edu-heading">
+                <h4 id="edu-heading">Education</h4>
+                <p><strong>B.Tech in Computer Science</strong>  </p>
+                <p>College Of Engineering Roorkee</p>
+            </section>
+
+            <section aria-labelledby="skills-heading">
+                <h4 id="skills-heading">Skills</h4>
+                <ul>
+                    <li>HTML5 &amp; CSS3</li>
+                    <li>JavaScript (Basics)</li>
+                    <li>Problem Solving</li>
+                </ul>
+            </section>
+
+            <footer>
+                <p>Contact: yadavshivani@email.com | +91- 1234....</p>
+            </footer>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- TASK 1.2: Nested navigation menu                -->
+        <!-- ============================================= -->
+        <section class="task" id="task2" aria-labelledby="task2-heading">
+            <h2 id="task2-heading">Task 1.2: Nested Navigation Menu (Absolute Links)</h2>
+
+            <nav class="menu" aria-label="External Learning Resources">
+                <ul>
+                    <li><a href="https://www.w3.org/">W3C Standards</a></li>
+
+                    <li>Learning Resources
+                        <!-- Nested (sub) menu -->
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+                            <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+                        </ul>
+                    </li>
+
+                    <li>Practice Platforms
+                        <ul>
+                            <li><a href="https://www.geeksforgeeks.org/">GeeksforGeeks</a></li>
+                            <li><a href="https://leetcode.com/">LeetCode</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <p>Select a link above to visit external learning resources (absolute URLs used throughout).</p>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- TASK 1.3: Catalog using definition lists        -->
+        <!-- ============================================= -->
+        <section class="task" id="task3" aria-labelledby="task3-heading">
+            <h2 id="task3-heading">Task 1.3: Web Catalog Using Definition Lists</h2>
+
+            <dl>
+                <dt>Notebook (200 pages)</dt>
+                <dd>Ruled A4-size notebook, ideal for daily notes.</dd>
+                <dd>Price: &#8377;60</dd>
+
+                <dt>Ball Pen (Blue)</dt>
+                <dd>Smooth writing gel pen with 0.7mm tip.</dd>
+                <dd>Price: &#8377;10</dd>
+
+                <dt>Geometry Box</dt>
+                <dd>Complete set with compass, divider, and protractor.</dd>
+                <dd>Price: &#8377;120</dd>
+            </dl>
+        </section>
+
+    </main>
+
+    <!-- MAIN SITE FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; Thank you for visiting!  &mdash; Lab Sheet 01 Submission</p>
+    </footer>
+
+</body>
+</html>
