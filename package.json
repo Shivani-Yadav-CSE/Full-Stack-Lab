@@ -1,0 +1,13 @@
+
+{
+  "name": "student-records-api",
+  "version": "1.0.0",
+  "description": "REST API for student records using Node.js + Express (in-memory array)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
